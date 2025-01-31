@@ -1,0 +1,149 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+        input{
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px 5 px;
+            border-radius: 8px;
+            font-size: 20px;
+        }
+        body{
+            /* background-color: rgb(150, 202, 244); */
+            background-image: url('bt21.png');
+            background-attachment: fixed;  
+            background-size: cover;
+           
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="border: 1px solid black; margin: 100px auto; padding: 20px; width: 50%; background-color: rgb(70, 176, 233);" >
+    <form action="abc">
+        <div>
+            <label for="name">Name:-</label>
+            <input type="text" id="name" placeholder="Enter name" required>
+        </div>
+    <div>
+        <label for="email">Email:-</label>
+        <input type="email" id="email" placeholder="Enter Email" required>
+    </div>
+    <div>
+        <label for="password">Password:-</label>
+        <input type="password" placeholder="*************" id="password" required>
+    </div>
+    <div>
+        <label for="contact">Contact:-</label>
+        <input type="tel" id="contact" placeholder="+91 9359396403" required>
+    </div>
+    <div>
+        <label for="age">Age:-</label>
+        <input type="number" placeholder="Enter Age" id="age" required>
+    </div>
+    <div>
+        <label for="dob">Date of Birth:-</label>
+        <input type="date" placeholder="22/01/2025" id="dob" required>
+    </div>
+    <div>
+        <label for="gender">Select Gender:-</label><br>
+        Male<input type="radio" name="gender" >
+        Female<input type="radio" name="gender" >
+    </div>
+    <div>
+        <label for="">Hobbies:-</label><br>
+        drama <input type="checkbox">
+        game <input type="checkbox">
+        drawing <input type="checkbox">
+    </div>
+    <div>
+        <label for="course">Select courses:-</label>
+        <select name="" id="course" style="width: 100%;
+        margin-top: 5px;
+        padding: 10px 5 px;
+        border-radius: 8px;
+        font-size: 20px;">
+        <option value="">Select course</option>
+           <optgroup label="Backend course">
+            <option value="Java Full Stack">Java Development</option>
+            <option value="Python Full Stack">Python Development</option>
+            <option value=".Net Full Stack">.Net Development</option>
+        </optgroup>
+        <optgroup label="Frontend course">
+            <option value="">HTML</option>
+            <option value="">CSS</option>
+            <option value="">Javascript</option>
+            <option value="">Angular</option>
+            <option value="">React</option>
+        </optgroup>
+        </select>
+    </div>
+    <div>
+        <label for="address">Address:-</label>
+        <textarea name="" id="address" rows="5" cols="30" style="width: 100%;
+        margin-top: 5px;
+        padding: 10px 5 px;
+        border-radius: 8px;
+        font-size: 20px;"></textarea>
+    </div>
+    <div>
+        <label for="">Skills</label><br>
+        Core java <input type="range" min="0" max="100" id="corejava" onchange="changeCore()">
+        <p id="first" style="color: aliceblue;">50%</p>
+
+        Mysql <input type="range" min="0" max="100" id="mysql" onchange="changesql()">
+        <p id="second" style="color: aliceblue;">50%</p>
+       
+        Html <input type="range" min="0" max="100" id="html" onchange="changehtml()">
+        <p id="third" style="color: aliceblue;">50%</p>
+       
+        CSS <input type="range" min="0" max="100" id="css" onchange="changecss()">
+        <p id="forth" style="color: aliceblue;">50%</p>
+        
+        javascript <input type="range" min="0" max="100" id="javascript" onchange="changescript()">
+        <p id="fifth" style="color: aliceblue;">50%</p>
+    </div>
+    <div>
+        <input type="button" value="button">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <!-- <button type="button">Cancel</button> -->
+    </div>
+    </form>
+</div>
+
+    <script>
+        let changeCore=()=>{
+            let corejavaa=document.getElementById("corejava").value
+            console.log(corejavaa)
+            document.getElementById("first").innerHTML=`<b>${corejavaa}%</b>`
+        }
+        let changesql=()=>{
+            let sql=document.getElementById("mysql").value
+            console.log(sql)
+            document.getElementById("second").innerHTML=`<b>${sql}%</b>`
+        }
+        let changehtml=()=>{
+            let htm=document.getElementById("html").value
+            console.log(htm)
+            document.getElementById("third").innerHTML=`<b>${htm}%</b>`
+        }
+        let changecss=()=>{
+            let cs=document.getElementById("css").value
+            console.log(cs)
+            document.getElementById("forth").innerHTML=`<b>${cs}%</b>`
+        }
+        let changescript=()=>{
+            let js=document.getElementById("javascript").value
+            console.log(js)
+            document.getElementById("fifth").innerHTML=`<b>${js}%</b>`
+        }
+    </script>
+</body>
+</html>

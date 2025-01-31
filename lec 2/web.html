@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav{
+            background-color: blueviolet;
+            width: 100%;
+            height: 50px;
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0px;
+
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #one{
+            background-color: rgb(226, 242, 147);
+        }
+        #two{
+            background-color: rgb(150, 232, 150);
+        }
+        #three{
+            background-color: rgb(113, 184, 184);
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="#one">Home</a>
+        <a href="#two">About</a>
+        <a href="#three">Contact</a>
+    </div>
+    <div class="container" id="one">
+        <h1>Home Page</h1>
+    </div>
+    <div class="container" id="two">
+        <h1>About Page</h1>
+    </div>
+    <div class="container" id="three">
+        <h1>Contact Page</h1>
+    </div>
+</body>
+</html>

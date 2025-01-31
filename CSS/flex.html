@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container{
+            height: 1000px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /* align-items: end; */
+            flex-wrap: wrap;
+            align-content: start;
+        }
+        .inner{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(55, 109, 125);
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+        <div class="inner">4</div>
+    </div>
+</body>
+</html>

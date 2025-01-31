@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        nav{
+            width: 100;
+            display: flex;
+            background-color: rgb(255, 82, 0);
+            padding: 7px 0px;
+            position: fixed;
+        }
+        .first{
+            display: flex;
+            width: 30%;
+            justify-content: center;
+        }
+        .second{
+            display: flex;
+            width: 70%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        footer{
+            background-color: rgb(255, 82, 0);
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0%;
+            width: 100%;
+            padding: 5px 0px;
+        }
+        main{
+            display: flex;
+            height: 700px;
+        }
+        .first-main{
+            height: 150%;
+            width: 70%;
+            justify-content: center;
+        }
+        .second-main{
+            width: 30%;
+            height: 150%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: brown;
+
+        }
+        section{
+            height: 50%;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        article{
+            height: 50%;
+            background-color: rgb(8, 0, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        aside{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="first">
+                <img src="Swiggy_logo.png" alt="" height="50px">
+            </div>
+           <div class="second">
+                <a href="">Home</a>
+                <a href="">Contact</a>
+                <a href="">About us</a>
+                <a href="">Sign In</a>
+           </div>
+        </nav>
+    </header>
+    <main>
+        <div class="first-main">
+            <section>
+                this is my section tag
+            </section>
+            <article>
+                this is my artical tag
+            </article>
+        </div>
+        <div class="second-main">
+            <aside>
+                this is my aside tag
+            </aside>
+        </div>
+    </main>
+    <footer>
+        Copyright Swiggy.com All rights Reserved.
+    </footer>
+
+</body>
+</html>

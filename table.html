@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table{
+            width: 80%;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td,th{
+            border: 1px solid black;
+        }
+        .header{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table border="1">
+        <caption>Employee Table</caption>
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>salary</th>
+            <th>age</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Siddhi</td>
+                <td>20000</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Shreyas</td>
+                <td>40000</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+
+    </table> -->
+
+    <table>
+        <caption><h1>Col Span</h1></caption>
+        <thead>
+            <tr class="header">
+                <th>Name</th>
+                <th>Email</th>
+                <th colspan="2">Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>XYZ</td>
+                <td>xyz@gmail.com</td>
+                <td>7539516589</td>
+                <td>5826548975</td>
+            </tr>
+            <tr>
+                <td>XYZ</td>
+                <td>xyz@gmail.com</td>
+                <td>7539516589</td>
+                <td>5826548975</td>
+            </tr>
+            <tr>
+                <td>XYZ</td>
+                <td>xyz@gmail.com</td>
+                <td>7539516589</td>
+                <td>5826548975</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <caption><h1>Row Span</h1></caption>
+        <thead>
+            <tr class="header">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">XYZ</td>
+                <td rowspan="2">xyz@gmail.com</td>
+                <td>7539516589</td>
+            </tr>
+            <tr>
+                <td>7539516589</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

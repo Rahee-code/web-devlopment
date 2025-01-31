@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formsite</title>
+    <style>
+    .head{
+        background-image: url(hotel1.jpg); 
+        background-position: 50% 50%;
+        text-align: center; 
+        background-color: transparent;
+        width: auto;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="head">
+            <h1>Hotel paradise</h1>
+        </div>
+       <div>
+        <form action="">
+            <div class="inner">
+                <label for="Fname"> First Name:- <span>*</span></label><br>
+                <input type="text" id="fname" placeholder="Enter first name" required>
+            </div>
+            <div class="inner">
+                <label for="Lname"> Last Name:-</label><br>
+                <input type="text" id="lname" placeholder="Enter last name" required>
+            </div>
+            <div class="inner">
+                <label for="ad1">Address 1:-</label><br>
+                <input type="text" id="ad1" placeholder="Address line 1" required>
+            </div>
+            <div class="inner">
+                <label for="ad2">Address 2:-</label><br>
+                <input type="text" id="ad2" placeholder="Address line 2">
+            </div>
+            <div class="inner">
+                <label for="city">City:-</label><br>
+                <input type="text" id="City" placeholder="Enter city" required>
+            </div>
+            <div class="inner">
+                <label for="State">State:-</label><br>
+                <select type="text" id="state"></select>
+            </div>
+            <div class="inner">
+                <label for="zip">Zip code:-</label><br>
+                <input type="number" id="zip" placeholder="Enter zip" required>
+            </div>
+            <div class="inner">
+                <label for="phone">Phone:-</label><br>
+                <input type="tel" maxlength="10" id="phone"  required>
+            </div>
+            <div class="inner">
+                <label for="email">Email Address:-</label><br>
+                <input type="email" id="email"  required>
+            </div>
+            <div class="inner">
+                <label for="cidate">check-in Date:-</label><br>
+                <input type="date" id="cidate"  required>
+            </div>
+            <div class="inner">
+                <label for="citime">check-in Time:-</label><br>
+                <input type="time" id="citime"  required>
+            </div>
+            <div class="inner">
+                <label for="codate">check-out Date:-</label><br>
+                <input type="date" id="codate"  required>
+            </div>
+            <div class="inner">
+                <label for="cotime">check-out Time:-</label><br>
+                <input type="time" id="cotime"  required>
+            </div>
+            <div class="inner">
+                <label for="rprefer">Room preference:-</label><br>
+                Standard<input type="radio" name="room">
+                Deluxe<input type="radio" name="room">
+                Suite<input type="radio" name="room">
+            </div>
+            <div>
+                <label for="adult">No of adults:-</label>
+            </div>
+        </form>
+       </div>
+    </div>
+    
+</body>
+</html>

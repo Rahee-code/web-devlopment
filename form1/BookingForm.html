@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <style>
+        .container{
+            width: 40%;
+            background-color: grey;
+            padding: 10px;
+            margin: auto;
+        }
+        .inner-container{
+            background-color: white;
+            padding: 5px;
+        }
+        img{
+            opacity: 0.6;
+            height: 240px;
+           
+        }
+        .img{
+            position: relative;
+        }
+        h1{
+        
+            position: absolute;
+            top: 80px;
+           left: 30%;
+           color: black;
+            
+        }
+        span{
+            color: red;
+        }
+        label{
+            font-size: 13px;
+            font-weight: 900;
+        }
+        .inner{
+            margin-top: 10px;
+        }
+        input{
+            width: 97%;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="img" style="text-align: center;">
+                <img src="hotel.jpg" width="100%" alt="">
+                <h1>Hotel Paradise</h1>
+            </div>
+            <div class="form">
+                <form action="">
+                <div class="inner">
+                    <label for="fname">First Name <span>*</span></label><br>
+                    <input type="text" id="fname">
+                </div>
+                <div class="inner">
+                    <label for="lname">Last Name <span>*</span></label><br>
+                    <input type="text" id="lname">
+                </div>
+                <div class="inner">
+                    <label for="ad1">Address 1 <span>*</span></label><br>
+                    <input type="text" id="ad1">
+                </div>
+                <div class="inner">
+                    <label for="ad2">Address 2 <span>*</span></label><br>
+                    <input type="text" id="ad2">
+                </div>
+                <div class="inner">
+                    <label for="city">City <span>*</span></label><br>
+                    <input type="text" id="city">
+                </div>
+                <div class="inner">
+                    <label for="state">State <span>*</span></label><br>
+                    <select name="" id="state">
+
+                    </select>
+                </div>
+                <div class="inner">
+                    <label for="zcode">Zip Code <span>*</span></label><br>
+                    <input type="text" id="zcode">
+                </div>
+                <div class="inner">
+                    <label for="phone">Phone <span>*</span></label><br>
+                    <input type="tel" id="phone">
+                </div>
+                <div class="inner">
+                    <label for="email">Email <span>*</span></label><br>
+                    <input type="email" id="email">
+                </div>
+                <div class="inner">
+                    <label for="cdate">Check-in-Date <span>*</span></label><br>
+                    <input type="date" id="cdate">
+                </div>
+                <div class="inner">
+                    <label for="ctime">Check-in-Time <span>*</span></label><br>
+                    <input type="time" id="ctime">
+                </div>
+                <div class="inner">
+                    <label for="codate">Check-out-Date <span>*</span></label><br>
+                    <input type="date" id="codate">
+                </div>
+                <div class="inner">
+                    <label for="cotime">Check-out-Time <span>*</span></label><br>
+                    <input type="time" id="cotime">
+                </div>
+                <div class="inner">
+                    <label for="">Room Preference<span>*</span></label><br>
+                    <input type="radio" id="standard">
+                    <label for="standard">Standard</label>
+                    <input type="radio" id="deluxe">
+                    <label for="deluxe">Deluxe</label>
+                    <input type="radio" id="suite">
+                    <label for="suite">Suite</label>
+                </div>
+                <div class="inner">
+                    <label for="adult">Number of adults <span>*</span></label><br>
+                    <input type="button" value="1" style="width: 25px;">
+                    <input type="button" value="2" style="width: 25px;">
+                    <input type="button" value="3" style="width: 25px;" >
+                    
+                    <input type="button" value="4" style="width: 25px;">
+                </div>
+                <div class="inner">
+                    <label for="adult">Number of children <span>*</span></label><br>
+                    <input type="button" value="0" style="width: 25px;">
+                    <input type="button" value="1" style="width: 25px;">
+                    <input type="button" value="2" style="width: 25px;">
+                    <input type="button" value="3" style="width: 25px;">
+                    <input type="button" value="4" style="width: 25px;">
+                </div>
+                <div class="inner">
+                    <label for="instruction">Special Instruction <span>*</span></label><br>
+                    <textarea rows="5" id="instruction" style="width: 98%; margin-top: 5px;"></textarea>
+                </div>
+
+                <div class="inner" style="text-align: center;">
+                    <input type="submit" value="submit" style="width: 70px; background-color: green; color:white; padding: 5px 0px;">
+                </div>
+                
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

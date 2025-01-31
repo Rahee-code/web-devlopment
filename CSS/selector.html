@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        /* universal selector */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* class selector */
+        .first{
+            color: blueviolet;
+        }
+        .second{
+            color: violet;
+        }
+        .head{
+            color: red;
+        }
+        /* grouping selector       id selector */
+        #first,#second{
+            background-color: rgb(236, 236, 119);
+        }
+        #third{
+            background-color: rgb(133, 242, 133);
+        }
+        /* psudo selector */
+        button:hover{
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 7px;
+            border-style: none;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- blueviolet -->
+        <h1 class="first">First Heading</h1>
+    <!-- violet -->
+        <h1 class="second">Second heading</h1>
+
+    <!-- 1,2 bgcolor=yellow  3 bgcolor=green -->
+     <h1 class="head" id="first">First</h1>
+     <h2 class="head" id="second">Second</h2>
+     <h3 class="head" id="third">Third</h3>
+
+     <button>Submit</button>
+</body>
+</html>
