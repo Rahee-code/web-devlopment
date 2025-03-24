@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body> 
+    <h1>i am h1</h1>
+    <h1>i am also h1</h1>
+    <h2 class="h2">i am h2</h2>
+    <h3 id="h3">i am h3</h3>
+    <h4 style="display: none;">hidden</h4>
+    <input type="text">
+    <button onclick="displayName()">submit</button>
+    <img src="green star.png" alt="">
+
+
+    <script>
+
+        // Dom selector:
+            // 1.getElementById
+            // 2.getElementByName
+            // 3.getElementByClassName
+            // 4.querySelector
+            // 5.querySelectorAll
+
+        // property:
+            // 1.innerText
+            // 2.innerHTML
+            // 3.textContent
+            // 4.style
+            // 5.value
+
+        let element=document.querySelector("h1");
+        console.log(element);
+        console.log(element.innerText);
+
+        let e=document.querySelector("body");
+        console.log(e.innerHTML);
+        console.log(e.textContent);
+
+        let e1=document.querySelectorAll("h1");
+        console.log(e1[0].innerText);
+        console.log(e1[1].innerText);
+        e1[0].innerText="H1 changes by js";
+        e1[1].innerText="H1 also change by js";
+        e1[0].style.backgroundColor="red";
+        e1[0].style.color="white";
+        e1[1].style.backgroundColor="yellow";
+        e1[1].style.color="white";
+
+        function displayName()
+        {
+            let input=document.querySelector("input");
+            console.log(input.value);
+            input.value="";
+        }
+
+        let input=document.querySelector("input").value="javascript";
+
+        let img=document.querySelector("img").src="rice1.png";
+        console.log(img);
+
+
+
+        
+
+
+
+
+
+
+        
+
+    </script>
+</body>
+</html>

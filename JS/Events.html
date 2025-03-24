@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+        }
+        .div{
+            background-color: rgb(208, 142, 208);
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+<script>
+    document.querySelector("div").addEventListener("click",function(){
+        this.innerHTML="<h1>I am clicked</h1>";
+        this.setAttribute("class","div");
+    });
+    document.querySelector("div").addEventListener("dblclick",function(){
+        this.innerHTML="<h1>I am double clicked</h1>";
+        this.setAttribute("class","div");
+    });
+    document.querySelector("div").addEventListener("contextmenu",function(){
+        this.innerHTML="<h1>I am right clicked</h1>";
+        this.setAttribute("class","div");
+    });
+    document.querySelector("div").addEventListener("mouseenter",function(){
+        this.innerHTML="<h1>I am enter</h1>";
+        this.setAttribute("class","div");
+    });
+    document.querySelector("div").addEventListener("mouseout",function(){
+        this.innerHTML="<h1>I am out</h1>";
+        this.setAttribute("class","div");
+    });
+</script>
+</html>

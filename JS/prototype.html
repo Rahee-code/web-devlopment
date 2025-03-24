@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    
+    <!-- prototype chaining=prototype interitence -->
+    <script>
+
+        let common={
+            "commonf":function(){
+                console.log("common function of all animals");
+            }
+        }
+        let Animal={
+            "leg":4,
+            "eye":2,
+            "eat":function(){
+                console.log("eating......");
+            },
+            
+        }
+
+        let dog={
+            "speak":function(){
+                console.log("speaking....");
+            }
+        }
+
+        dog.__proto__=Animal;
+        console.log(dog.leg);
+
+        Animal.__proto__=common;
+        dog.commonf();
+        console.log(dog);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator-App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 m-auto mt-5">
+                <div class="card">
+                    <div class="card-header">
+                        <input type="text" class="w-100 py-2" readonly>
+                    </div>
+                    <div class="card-body d-flex justify-content-around flex-wrap">
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('C')">C</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('X')">X</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('/')">/</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('%')">%</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('7')">7</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('8')">8</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('9')">9</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('+')">+</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('4')">4</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('5')">5</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('6')">6</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('-')">-</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('1')">1</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('2')">2</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('3')">3</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('*')">*</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-5" onclick="setValue('0')">0</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-5" onclick="setValue('.')">.</button>
+                        <button class="btn btn-outline-warning text-black m-3 px-4" onclick="setValue('=')">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function setValue(num) {
+            let input=document.querySelector("input");
+            if(num!="=" && num!="X"){
+                input.value+=num;
+            }
+            if(num=="="){
+             let result=eval(input.value);
+            input.value=result;
+             
+            }
+            if(num=="C"){
+                input.value="";
+            }
+            if(num=="X"){
+                console.log("hi");
+                
+                let result=input.value.substring(0,input.value.length-1);
+                console.log(result);
+                
+                input.value=result;
+            }
+            
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pass by value/Refrence</title>
+</head>
+<body>
+    
+    <script>
+    // <!-- Pass by value -->
+    // a & b both are independent
+     let a=10;
+     let b=a;
+     console.log(a);
+     console.log(b);
+     a=5;
+     console.log(a);
+     console.log(b);
+
+
+    //  pass by reference
+    // with object
+    let p1={
+        "id":1,
+        "name":"abc"
+    }
+    console.log(p1);
+    let p2=p1;
+    console.log(p2);
+    p1.id=5;
+    console.log(p2);
+
+
+    // with array
+    let arr=[1,2,3]
+    let arr1=arr;
+    console.log(arr1);
+    arr.push(5)
+    console.log(arr1);     
+    </script>
+</body>
+</html>

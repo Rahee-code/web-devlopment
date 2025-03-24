@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //String:string is immmutable 
+        //we can store string in three ways
+        //1.using double quote
+        //2.using single quote
+        //3.using backtish symbol(`):=ES6
+        let name="Java";
+        console.log(name);
+        let name1='python';
+        console.log(name1);
+        let name2=`javascript`;
+        console.log(name2);
+
+        //by using keyword
+        let name3=new String("react");
+        console.log(name3);
+
+        //String interpoliation or string template it introduction ES6
+        let num1=20;
+        let num2=30;
+        // console.log("the sum of",num1,"and",num2,"is =",num1+num2);
+        console.log(`the sum of ${num1} and ${num2} is ${num1+num2}`);
+
+        let desc=
+        `java is programming lanuage`;
+        console.log(desc);
+
+
+        let str="java";
+        let str1="programming";
+
+        console.log(str.charAt(1));
+        console.log(str[2]);
+        console.log(str.length);
+        console.log(str.indexOf("a"));
+        console.log(str.lastIndexOf("a"));
+        console.log(str.includes("av"));
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+        console.log(str.concat(" ").concat(str1));
+        console.log(str.substring(0,3));
+        console.log(str.slice(0,3));
+        console.log(str.search("v"));
+        console.log(str.match("a"));
+        console.log(str.replace("a","o"));
+        console.log(str.split(" "));
+        
+
+        //function:-it is a reusable block of code that perform some specific task.
+        //types of function:-named function, anoymous funcyion,arrow function,higher order function,callback function
+        //IIFE fnction
+
+        //1.name function
+        // function sum(a,b){
+        //     // console.log(a+b);   
+        //     return a+b;
+        // }
+        // console.log(sum(5,7));
+
+        //2.anomyous function:-a function without name
+        // let sum=function(a,b){
+        //     // console.log(a+b);   
+        //     return a+b;
+        // }
+        // console.log(sum(50,7));
+
+        //3.arow function:-it is also known as anomyous function. it introduce in ES6(it is same as lambda function)
+        // let sum=(a,b)=>a+b;
+        // console.log(sum(20,7));
+
+        //4.heigher order function:-it takes another function as an argument.
+        // let calc=((a,b)=>{
+        //     return a+b;
+        // })
+        // console.log(calc(3,4));
+
+        //5.callback function:-a function thet passed as an argument in another function is known as callback function
+        
+        //6.IIFE:-imediately invoked function expression
+        // (function sum(){
+        //     console.log("i am imediately invoke");
+            
+        // })()
+
+        // let sum=(()=>{
+        //     console.log("i am invoke");
+            
+        // })()
+
+        // object:it is a collection of item.it stores the item in key value pair
+            // difference betweeen regular fun and arrow
+                // if we use this keyword in fun it gives current object content
+                // but in arrow it returns window object.
+        //by using literal
+        let person={
+            "name":"vijay",
+            "age":21,
+            "address":{
+                "city":"mumbai",
+                "state":"maharashtra",
+                "country":"india"
+            },
+            "contactNo":[9865741235,7745826589],
+            "detail":function(){
+                console.log(this.name);
+            }
+        }
+
+        console.log(person);
+        person.name="Amar";
+        console.log(person["contactNo"]);
+        person.contactNo.push(7525146589);
+        console.log(person.contactNo);
+        person.pincode="400060";
+        console.log(person);
+        person.detail();
+        person.address.pincode1="123456";
+        console.log(person);
+
+        // by using new keyword
+        let student=new Object();
+        console.log(student);
+        student.name="John";
+        console.log(student);
+
+        console.log(Object.keys(person));
+        console.log(Object.values(person));
+        console.log(Object.entries(person));
+        Object.freeze(person);
+        person.hobbies="playing";
+
+        for(let i in person)
+        {
+            console.log(person[i]);
+        }
+        console.log(person.hobbies);
+
+        // find the frequency of elements
+        let arr=[1,2,3,2,3,3,3,4,5,5,5];
+
+        let frequency={
+            
+        };
+        for(let i in arr)
+        {
+            if(frequency[arr[i]]==undefined)
+            {
+                frequency[arr[i]]=1;
+            }
+            else
+            {
+                let value=frequency[arr[i]];
+                frequency[arr[i]]=value+1;
+            }
+        }
+        console.log(frequency);
+
+        let max=-1;
+        let element=-1;
+        for(let key in frequency)
+        {
+            if(frequency[key]>max)
+            {
+                element=key;
+                max=frequency[key];
+            }
+        }
+        console.log(element);
+
+
+
+
+
+
+        
+        
+        
+
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

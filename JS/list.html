@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            background-color: aqua;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 20px;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 25%; margin: auto;">
+        <center>
+            <input type="text" style="padding: 10px 10px; width: 80%; font-size: 20px;">
+            <button onclick="addData()" style="padding: 0px 10px; height: 45px;">submit</button>
+        </center>
+    </div>
+
+
+    <script>
+        function addData()
+        {
+            let data=document.querySelector("input").value;
+            let div=document.createElement("div");
+            div.innerHTML=`<b>${data}</b>`;
+            div.setAttribute("class","div");
+            document.querySelector("center").appendChild(div);
+            document.querySelector("input").value="";
+
+        }
+    </script>
+</body>
+</html>

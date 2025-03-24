@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic js</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script>
+        console.log("variables");
+        //var
+        var a=10;
+        var a=20;//can redelare with same name
+        console.log(a);
+
+        //let
+        let b=20;
+         b=30; //cannot redeclare but can reassign
+        console.log(b);
+
+        //const
+        const c=30;//cannot redeclare and cannot reassign
+        console.log(c);
+
+        //without keyword
+        d=40;
+        console.log(d);
+
+
+        // scope
+        // var
+        var va=10;
+        console.log(va);
+        {
+            console.log(va);
+            var vb=20;
+            console.log(vb);
+        }
+        console.log(vb);
+
+        // let
+        let la=10;
+        console.log(la);
+        {
+            console.log(la);
+            let lb=20;
+            console.log(lb);
+        }
+        let lb=30;
+        console.log(lb);
+
+        // const
+        // const ca=10;
+        // console.log(ca);
+        // {
+        //     console.log(ca);
+        //     const cb=20;
+        //     console.log(cb);
+        // }
+        // console.log(cb);
+
+        // datatype:-
+            // It indicates which type of data is present inside a variable
+            // 2 types:primitive
+                        // number,string,boolean,undefined,null,symbol,bigint
+                    // non-peimitive
+                        // Array,object
+            // NOte:We can check the datatype of any variable by using typeof operator.
+
+
+        let a1=10;
+        console.log(typeof a);
+
+        let name="java";
+        console.log(typeof name);
+
+        let flag=false;
+        console.log(typeof flag);
+
+        let s=null;
+        console.log(typeof s);
+
+        let un;
+        console.log(typeof un);
+
+        let num=1111111n;
+        console.log(typeof num);
+
+        let s1=Symbol("java");
+        console.log(s1.description);
+        console.log(typeof s1);
+        let s2=Symbol("java");
+        console.log(s1==s2);
+
+        let person={
+            "name":"Rahi",
+            "age":21
+        }
+        console.log(person);
+        console.log(typeof person);
+
+        let arr=[1,2,3,4];
+        console.log(arr);
+        console.log(typeof arr);
+
+        // operator:assignment,comparison,logical,bitwise,arithmetic
+
+        // conditional:same as java
+        // switch
+        let week=1;
+        switch(week)
+        {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Monday");
+                break;
+            default:
+                console.log("invalid");
+
+        }
+        // wap to add 2 number take input from user
+
+        // let n1=parseInt(prompt("Enter a number: "));
+        // console.log(typeof n1);
+        // let n2=parseInt(prompt("Enter a number: "));
+        // let ans=n1+n2;
+        // console.log(ans);
+
+
+        let arr1=[1,2,3,4,5,"java",true];
+        console.log(arr1);
+
+        arr1.push(6);//add at the end of array
+        console.log(arr1);
+        arr1.pop();//remove last element
+        console.log(arr1);
+        arr1.unshift(7);//enter element at start
+        console.log(arr1);
+        arr1.shift();//remove first element
+        console.log(arr1);
+
+        delete arr1[3];
+        console.log(arr1);
+        console.log(arr1[3]);
+        arr1.splice(3,2);
+        console.log(arr1);
+        arr1.splice(3,0,8,9,10);//index pos,delete,add from that index pos
+        console.log(arr1);
+
+        arr1.reverse();
+        console.log(arr1);
+        console.log(arr1.slice(1,4));
+        console.log(arr1.slice(2));
+        console.log(arr1.indexOf(true));
+        console.log(arr1.lastIndexOf(3));
+        arr1.sort((a,b)=>a-b);
+        console.log(arr1);
+        arr2=[1,2,3,11,23,32,121,321];
+        arr2.sort();//sort alphabetically diff from other
+        console.log(arr2);
+        console.log(arr2.join('.'));
+        // merge the 2 array
+        let arr3=[1,2,3];
+        console.log(arr2.concat(arr3));
+
+
+
+
+
+    </script>
+</body>
+</html>

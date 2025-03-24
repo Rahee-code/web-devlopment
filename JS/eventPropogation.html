@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event propogation</title>
+    <style>
+        #first{
+            border: 1px solid black;
+            padding: 35px;
+        }
+        #second{
+            border: 1px solid black;
+            padding: 45px;
+        }
+        #third{
+            border: 1px solid black;
+            padding: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">first
+        <div id="second">second
+            <div id="third">third
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // by default event bubbling(inner-outer)
+        // event captureing(outer-inner)
+        // to stop bubbling and enable capture pass true as an argument to addEventlistener
+        document.querySelector("#first").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            console.log("first div");
+        })//,true
+        document.querySelector("#second").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            console.log("second div");
+        })
+        document.querySelector("#third").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            console.log("third div");
+        })
+    </script>
+</body>
+</html>

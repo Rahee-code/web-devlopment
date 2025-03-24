@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapFilterReduce</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // <!-- Map only works with array -->
+        // Array.from(ar)  ---to convert into array
+        // Array.isArray(arr)  to check if it is array or not
+
+        let arr=[1,2,3,4,5]
+        // let ans=[]
+        // for(let i=0;i<arr.length;i++)
+        // {
+        //     ans.push(arr[i]*arr[i])
+        // }
+        // console.log(ans);
+
+        // Map
+        let square=arr.map((e)=>e*e)
+        console.log(square);
+
+        let even=arr.filter((e)=>e%2==0)
+        console.log(even);
+
+        let sum=arr.reduce((a,b)=>a+b)
+        console.log(sum);
+
+
+
+    </script>
+     
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call bind Apply</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // Call:To call generic(global) or function of any object in another object
+
+        details=function(country,gender){
+                console.log(`name :- ${this.name} age:- ${this.age} country:-${country} gender:-${gender}`);
+            }
+
+        let person1={
+            "name":"ajay",
+            "age":21,
+            "detail":function(country){
+                console.log(`name :- ${this.name} age:- ${this.age} country:-${country}`);
+            }
+
+        }
+
+        let person2={
+            "name":"Rahul",
+            "age":22,
+        }
+        // call
+        person1.detail.call(person2,"india")
+        details.call(person1,"USA","male")
+
+        // apply
+        details.apply(person2,["NY","Male"])
+
+        // bind
+        let p=details.bind(person1,"USA","Male")
+        p()
+
+    </script>
+</body>
+</html>

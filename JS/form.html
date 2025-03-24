@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div" class="row"></div>
+    </div>
+    <script>
+        document.querySelector("#username").addEventListener("focus", function () {
+            this.style.backgroundColor = "gray";
+        })
+        document.querySelector("#username").addEventListener("input", function () {
+            this.style.color = "white";
+        })
+        document.querySelector("form").addEventListener("submit", (e) => {
+            e.preventDefault();//stop refresing the page after submit click
+            let username = document.querySelector("#username").value;
+            let email = document.querySelector("#email").value;
+            let password = document.querySelector("#password").value;
+            createCard(username, email, password);
+            document.querySelector("#username").value = " ";
+            document.querySelector("#email").value = " ";
+            document.querySelector("#password").value =" ";
+        })
+        function createCard(username, email, password) {
+            let container = document.querySelector("#div");
+            let firstdiv = document.createElement("div");
+            firstdiv.setAttribute("class", "col-md-3");
+            let card = document.createElement("div");
+            card.setAttribute("class", "card");
+            let cardbody = document.createElement("div");
+            cardbody.style.backgroundColor = "aqua";
+            cardbody.innerHTML = `<h1>${username}</h1><h5>${email}</h5><p>${password}</p>`;
+            card.appendChild(cardbody);
+            firstdiv.appendChild(card);
+            container.appendChild(firstdiv);
+
+        }
+
+        //setTimeOut and setInterval:-asynchronus function
+        let d=new Date();
+        console.log(d);
+        console.log(d.getDate());
+        console.log(d.getDay());
+        console.log(d.getHours());
+        console.log(d.getMonth());
+        console.log(d.getMinutes());
+        
+        
+    </script>
+</body>
+
+</html>
